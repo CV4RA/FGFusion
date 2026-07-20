@@ -1,16 +1,3 @@
-"""
-FUME V21 — SACRED + Gaussian Uncertainty Head.
-
-Key changes vs V11:
-  1. Gaussian Uncertainty Head: learns per-sample logvar from hidden features
-  2. Dual uncertainty fusion: fuzzy entropy (alpha) + Gaussian sigmoid(logvar) (1-alpha)
-  3. KL regularization to prevent variance collapse
-  4. Residual + LayerNorm + Dropout + CutMix (from V20)
-  5. Deeper encoder (layer_num + 2)
-
-Self-contained. Usage: python main_v21.py
-"""
-
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
