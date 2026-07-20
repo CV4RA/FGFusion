@@ -157,23 +157,6 @@ Three TSR modes are supported:
 - **Fusion**: multiplicative confidence weighting
 - **Penalty**: subtractive uncertainty penalty
 
-### Hyperparameters
-
-| Parameter | Symbol | Default |
-|-----------|--------|---------|
-| Hard negative weight | γ | 0.30 |
-| Hard negative margin | δ | 0.15 |
-| Mixup weight | λ_mix | 0.50 |
-| CLIP weight | λ_clip | 1.0 |
-| KL weight | λ_KL | 0.05 |
-| SupCon weight | λ_sc | 0.25 |
-| UCal weight | λ_u | 0.12 |
-| GCal weight | λ_g | 0.10 |
-| Fusion coefficient | α | 0.5 |
-| EMA decay | ρ | 0.999 |
-| Phase A epochs | — | 160 |
-| Total epochs | — | 200 |
-
 ## Project Structure
 
 ```
