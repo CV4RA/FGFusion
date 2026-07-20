@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+datasets/*.mat
+datasets/*.h5py
+datasets/*.npy
+saved/
+.idea/
