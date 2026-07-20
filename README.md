@@ -25,17 +25,36 @@ By adaptively fusing both and calibrating against retrieval correctness, FGFusio
 
 ## Results
 
-Comparison with 14 state-of-the-art methods on 5 benchmarks (mAP):
+Comparison with state-of-the-art methods on 5 benchmarks (Average mAP, I→T / T→I / Avg.):
+
+### Standard Retrieval Protocol
+
+| Method | Venue | Pascal | Wikipedia | NUS-WIDE | INRIA | XMediaNet |
+|--------|-------|--------|-----------|----------|-------|-----------|
+| MCCA | SiKDD'10 | 0.649 | 0.290 | 0.390 | 0.381 | 0.094 |
+| ACMR | MM'17 | 0.627 | 0.424 | 0.540 | 0.423 | 0.486 |
+| DSCMR | CVPR'19 | 0.681 | 0.504 | 0.580 | 0.555 | 0.507 |
+| MAN | KBS'19 | 0.690 | 0.504 | 0.570 | 0.544 | 0.455 |
+| SDML | SIGIR'19 | 0.684 | 0.505 | 0.583 | 0.557 | 0.567 |
+| DRSL | INS'21 | 0.691 | 0.485 | 0.557 | 0.494 | 0.139 |
+| ALGCN | TMM'21 | 0.674 | 0.468 | 0.570 | 0.413 | 0.365 |
+| MARS | TCSVT'21 | 0.682 | 0.522 | 0.553 | 0.555 | 0.579 |
+| ELRCMR | MM'22 | 0.702 | 0.521 | 0.558 | 0.292 | 0.065 |
+| GNN4CMR | TPAMI'23 | 0.703 | 0.501 | 0.593 | 0.531 | 0.567 |
+| RONO | CVPR'23 | 0.706 | 0.497 | 0.575 | 0.460 | 0.161 |
+| SCL | TMM'23 | 0.693 | 0.522 | 0.583 | 0.464 | 0.178 |
+| HOPE | TPAMI'24 | 0.681 | 0.487 | 0.554 | 0.492 | 0.515 |
+| FUME | CVPR'25 | 0.720 | 0.510 | 0.589 | 0.576 | 0.637 |
+| **FGFusion (Ours)** | — | **0.810** | **0.623** | **0.690** | **0.703** | **0.741** |
+
+### Uncertainty-Weighted Protocol (u=0.5)
 
 | Method | Pascal | Wikipedia | NUS-WIDE | INRIA | XMediaNet |
 |--------|--------|-----------|----------|-------|-----------|
-| DSCMR (CVPR'19) | 0.681 | 0.504 | 0.580 | 0.555 | 0.507 |
-| GNN4CMR (TPAMI'23) | 0.703 | 0.501 | 0.593 | 0.531 | 0.567 |
-| RONO (CVPR'23) | 0.706 | 0.497 | 0.575 | 0.460 | 0.161 |
-| FUME (CVPR'25) | 0.720 | 0.510 | 0.589 | 0.576 | 0.637 |
-| **FGFusion (Ours)** | **0.810** | **0.623** | **0.690** | **0.703** | **0.741** |
+| FUME (u=0.5) | 0.856 | 0.748 | 0.716 | 0.882 | **0.863** |
+| **FGFusion (u=0.5)** | **1.000** | **0.900** | **0.936** | **0.908** | 0.828 |
 
-FGFusion achieves +9.0% to +12.7% improvement over prior best across all benchmarks.
+FGFusion achieves **+9.0% to +12.7%** average mAP improvement over prior best under standard protocol, and **near-perfect retrieval** under uncertainty-weighted re-ranking (1.000 on Pascal, 0.936 on NUS-WIDE).
 
 ## Installation
 
