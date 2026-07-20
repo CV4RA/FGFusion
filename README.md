@@ -1,7 +1,7 @@
 # FGFusion: Fuzzy-Gaussian Fusion for Uncertainty-Aware Cross-Modal Retrieval
 
 <p align="center">
-  <img src="assets/framework.png" width="95%">
+  <img src="assets/framework.pdf" width="95%">
 </p>
 
 ## Introduction
